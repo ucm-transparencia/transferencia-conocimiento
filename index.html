@@ -55,8 +55,6 @@ a:hover{text-decoration-color:currentColor}
 .bloque:nth-child(1){border-radius:0 0 14px 14px;border-top:none;animation-delay:.05s}
 .bloque:nth-child(2){animation-delay:.12s}
 .bloque:nth-child(3){animation-delay:.18s}
-.bloque:nth-child(4){animation-delay:.24s}
-.bloque:nth-child(5){animation-delay:.30s}
 .bloque-hdr{padding:14px 20px;border-bottom:2px solid var(--ucm-l);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .bloque-hdr-icon{width:30px;height:30px;background:var(--ucm-l);color:var(--ucm);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .bloque-hdr h2{font-family:var(--fd);font-size:clamp(.9rem,2.5vw,1.05rem);font-weight:600;color:var(--gris);flex:1}
@@ -101,27 +99,8 @@ a:hover{text-decoration-color:currentColor}
 .bar-label{font-size:.68rem;font-weight:700;color:var(--gris-m);text-align:center;padding:5px 0 0;white-space:nowrap}
 .bar-val-top{font-size:.62rem;font-weight:700;text-align:center;margin-bottom:4px;color:var(--gris);white-space:nowrap}
 
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:7px;font-size:.74rem;font-weight:700;font-family:var(--fn);text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:all var(--dur) var(--ease);border:none;white-space:nowrap;text-decoration:none;min-height:38px}
-.btn:focus-visible{outline:3px solid var(--ucm);outline-offset:2px}
-.btn-rojo{background:var(--ucm);color:#fff}
-.btn-rojo:hover{background:var(--ucm-d);transform:translateY(-1px);box-shadow:0 3px 10px rgba(157,34,53,.3)}
-.btn-dl{background:var(--verde);color:#fff}
-.btn-dl:hover{background:#14532d;transform:translateY(-1px);box-shadow:0 3px 10px rgba(22,101,52,.3)}
-.btn-dl:focus-visible{outline-color:var(--verde)}
-.btn-group{display:flex;flex-wrap:wrap;gap:8px}
-
-.dl-section{background:linear-gradient(135deg,var(--verde-l) 0%,#f0fdf4 100%);border:1px solid #bbf7d0;border-radius:12px;padding:16px 18px}
-.dl-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--verde);margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:480px){.dl-grid{grid-template-columns:1fr}}
-.dl-card{background:#fff;border:1px solid #bbf7d0;border-radius:9px;padding:12px 14px;display:flex;align-items:center;gap:12px;transition:all var(--dur) var(--ease)}
-.dl-card:hover{box-shadow:var(--sh-m);transform:translateY(-1px)}
-.dl-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.dl-icon.xlsx{background:#e8f5e9}
-.dl-info{flex:1;min-width:0}
-.dl-name{font-size:.8rem;font-weight:700;color:var(--gris);line-height:1.2}
-.dl-meta{font-size:.68rem;color:var(--gris-m);margin-top:2px}
-.dl-btn{flex-shrink:0}
+.twin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:0}
+@media(max-width:680px){.twin-grid{grid-template-columns:1fr}}
 
 .footer{background:var(--blanco);border-top:1px solid var(--gris-b);padding:18px 24px;font-size:.77rem;color:var(--gris-m);text-align:center;line-height:1.7}
 .footer a{color:var(--ucm-d);text-decoration:underline;text-decoration-color:rgba(157,34,53,.3)}
@@ -130,9 +109,6 @@ a:hover{text-decoration-color:currentColor}
 #backTop.visible{opacity:1;pointer-events:auto}
 #backTop:hover{background:var(--ucm-d);transform:translateY(-2px)}
 #backTop:focus-visible{outline:3px solid var(--ucm);outline-offset:3px}
-
-.twin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:0}
-@media(max-width:680px){.twin-grid{grid-template-columns:1fr}}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 </style>
@@ -301,54 +277,10 @@ a:hover{text-decoration-color:currentColor}
     </div>
   </section>
 
-  <!-- ── DESCARGA ───────────────────────────────────────────── -->
-  <section class="bloque" aria-labelledby="hdr-dl">
-    <div class="bloque-hdr">
-      <div class="bloque-hdr-icon" aria-hidden="true">⬇️</div>
-      <h2 id="hdr-dl">Descarga de datos</h2>
-    </div>
-    <div class="bloque-body">
-      <div class="dl-section">
-        <p class="dl-title">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
-          Datos disponibles para descarga
-        </p>
-        <div class="dl-grid">
-          <div class="dl-card">
-            <div class="dl-icon xlsx" aria-hidden="true">📗</div>
-            <div class="dl-info">
-              <p class="dl-name">Transferencia del Conocimiento UCM</p>
-              <p class="dl-meta">Excel (.xlsx) &nbsp;·&nbsp; Datos 2024–2025</p>
-            </div>
-            <div class="dl-btn">
-              <a href="https://www.ucm.es/portaldetransparencia/file/transferencia-conocimiento-ucm" download="transferencia-conocimiento-ucm.xlsx" class="btn btn-dl" aria-label="Descargar Excel de transferencia del conocimiento">
-                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 12-4-4m4 4 4-4"/><path d="M2 17v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2"/></svg>
-                .xlsx
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── ACCESOS ────────────────────────────────────────────── -->
-  <section class="bloque" aria-labelledby="hdr-accesos">
-    <div class="bloque-hdr">
-      <div class="bloque-hdr-icon" aria-hidden="true">🔗</div>
-      <h2 id="hdr-accesos">Acceso relacionado</h2>
-    </div>
-    <div class="bloque-body">
-      <div class="btn-group">
-        <a href="https://www.ucm.es/otri/" class="btn btn-rojo" target="_blank" rel="noopener noreferrer">Oficina de Transferencia del Conocimiento ↗<span class="sr-only"> (nueva pestaña)</span></a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="footer">
-  <p>Datos facilitados y extraídos de la <a href="https://www.ucm.es/otri/" target="_blank" rel="noopener noreferrer">Oficina de Transferencia del Conocimiento ↗<span class="sr-only"> (nueva pestaña)</span></a></p>
+  <p>Datos facilitados por la <a href="https://www.ucm.es/otri/" target="_blank" rel="noopener noreferrer">Oficina de Transferencia del Conocimiento ↗<span class="sr-only"> (nueva pestaña)</span></a></p>
 </footer>
 
 <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver al inicio de la página">↑</button>
